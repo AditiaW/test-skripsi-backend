@@ -19,7 +19,7 @@ admin.initializeApp({
 // Enable CORS for a specific origin
 app.use(
   cors({
-    origin: ' https://e2d1-2001-448a-6070-395a-a15e-9cbf-7434-fc98.ngrok-free.app', // Allow only your frontend's URL
+    origin: 'https://e2d1-2001-448a-6070-395a-a15e-9cbf-7434-fc98.ngrok-free.app', // Allow only your frontend's URL
     methods: ['GET', 'POST'], // Allow specific HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
     credentials: true, // Allow cookies if needed
