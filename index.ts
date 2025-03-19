@@ -3,17 +3,11 @@ import bodyParser from 'body-parser';
 import Midtrans from 'midtrans-client';
 import cors from 'cors';
 import admin from 'firebase-admin';
-// import * as admin from 'firebase-admin';
 
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-// const serviceAccount = require('./src/libs/test-skripsi-3c259-firebase-adminsdk-fbsvc-1aa168023d.json');
-
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount)
-// });
 admin.initializeApp({
   credential: admin.credential.cert({
     projectId: process.env.FIREBASE_PROJECT_ID,
@@ -21,7 +15,6 @@ admin.initializeApp({
     privateKey: process.env.FIREBASE_PRIVATE_KEY!.replace(/\\n/g, '\n')
   })
 });
-
 
 // Enable CORS for a specific origin
 app.use(
